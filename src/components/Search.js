@@ -8,7 +8,7 @@ export default function Search() {
     <div id="search" className="search">
       <input
         type="text"
-        placeholder="search movie"
+        placeholder="영화를 검색하세요"
         onChange={(e) => {
           setSearch(e.currentTarget.value);
         }}
@@ -20,7 +20,7 @@ export default function Search() {
         }}
       />
       <Link className="btnSearch" to={`/search?movie=${search}`}>
-        search
+        검색
       </Link>
     </div>
   );

@@ -3,7 +3,7 @@ export default function Footer() {
     <>
       <footer id="footer">
         <p className="copyright">
-          all copyright reserved by <strong>jjang051's media lab</strong>
+          all copyright reserved by <strong>wang's media lab</strong>
         </p>
       </footer>
     </>

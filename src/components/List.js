@@ -2,6 +2,7 @@ import axios from "axios";
 import { gsap } from "gsap";
 
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Movie from "./Movie";
 
 export default function List() {
@@ -19,7 +20,6 @@ export default function List() {
   return (
     <>
       <div className="container">
-        <h2 className="title"></h2>
         <ul className="movieList" ref={movieList}>
           {movies.map((item, idx) => {
             return <Movie movieInfo={item} key={idx} className="item" />;

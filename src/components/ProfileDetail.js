@@ -25,9 +25,6 @@ export default function Detail() {
   return (
     <div id="detail" className="detail">
       <div className="container">
-        <h2 className="title">
-          <strong>Detail</strong>
-        </h2>
         <div className="detailBox">
           <div className="img">
             <img src={`https://image.tmdb.org/t/p/w300/${detail.profile_path}`} alt="" />

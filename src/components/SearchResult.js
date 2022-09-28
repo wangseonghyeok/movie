@@ -30,9 +30,6 @@ export default function List() {
   return (
     <>
       <div className="container">
-        <h2 className="title">
-          <strong>search</strong> movie
-        </h2>
         <ul className="movieList">
           {movies.map((item, idx) => {
             // return <Movie imgSrc={item.poster_path} point={item.vote_average} />;

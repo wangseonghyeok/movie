@@ -23,41 +23,32 @@ a {
 li {
   list-style: none;
 }
-
-$red: rgb(218, 15, 15);
-$blue: rgb(15, 103, 218);
-
 #header {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100px;
+  height: 180px;
   position: relative;
   z-index: 99;
   overflow: hidden;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  h1 {
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
+  background-color: rgba(37, 36, 79, 0.5);
 
-    strong {
-      font-weight: 700;
-    }
+  img {
+    margin-top: 35px;
+    width: 140px;
   }
 }
 
 .container {
-  width: 1400px;
-  margin: 100px auto;
+  max-width: 1400px;
+
+  margin: 0 auto;
   color: #fff;
   .title {
     font-size: 36px;
     font-weight: 300;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     strong {
       font-weight: 700;
     }
@@ -67,8 +58,8 @@ $blue: rgb(15, 103, 218);
     flex-wrap: wrap;
     li {
       display: flex;
-      width: calc(50% - 20px);
-      margin: 150px 10px 0 10px;
+      width: calc(50% - 40px);
+      margin: 150px 20px 0 10px;
       padding: 30px;
       background-color: rgba(0, 0, 0, 0.2);
       border-radius: 0 20px 0 20px;
@@ -82,14 +73,15 @@ $blue: rgb(15, 103, 218);
         position: relative;
         .point {
           position: absolute;
-          bottom: 20px;
-          left: 20px;
-          width: 50px;
-          height: 50px;
+          right: 15px;
+          top: 15px;
+          font-size: 14px;
+          width: 35px;
+          height: 35px;
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: #000;
+          background-color: #3c2a78;
           color: #fff;
           border-radius: 100%;
         }
@@ -142,6 +134,7 @@ $blue: rgb(15, 103, 218);
 }
 
 .detail {
+  margin-top: 50px;
   .detailBox {
     display: flex;
     justify-content: space-between;
@@ -150,7 +143,6 @@ $blue: rgb(15, 103, 218);
       img {
         border-radius: 0 50px 0 50px;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-        border: 10px solid #fff;
       }
     }
     .info {
@@ -237,7 +229,9 @@ $blue: rgb(15, 103, 218);
 }
 #search {
   position: absolute;
-  right: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 110px;
   display: flex;
   input {
     height: 40px;
@@ -249,9 +243,10 @@ $blue: rgb(15, 103, 218);
     min-width: 300px;
   }
   a {
-    background-color: #111;
+    background-color: #3c2a78;
     color: #fff;
     display: flex;
+    height: 40px;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -266,124 +261,81 @@ $blue: rgb(15, 103, 218);
     width: 100%;
     padding: 0 20px;
   }
+  #search a {
+    padding: 0px 0px;
+    width: clamp(50px, 8vw, 80px);
+  }
 }
 
-// .vocas {
-//   display: flex;
-//   flex-direction: column;
-//   li {
-//     display: flex;
-//     background-color: #fff;
-//     margin: 10px 0;
-//     padding: 20px;
-//     border-radius: 5px;
-//     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-//     align-items: baseline;
-//     font-size: 18px;
-//     font-weight: 500;
-//     position: relative;
-//     align-items: center;
-//     &.done {
-//       background-color: #666;
-//       .eng {
-//         color: #ccc;
-//       }
-//       .kor {
-//         color: #ccc;
-//         display: flex;
-//         align-items: center;
-//       }
-//       .btns {
-//         pointer-events: none;
-//         opacity: 0.5;
-//       }
-//     }
-//     .check {
-//     }
-//     .eng {
-//       font-size: 24px;
-//       font-weight: 700;
-//       color: $blue;
-//       margin-left: 50px;
-//     }
-//     .kor {
-//       margin-left: 50px;
-//     }
-//     .btns {
-//       position: absolute;
-//       right: 10px;
-//       display: flex;
-//       align-items: center;
-//       top: 50%;
-//       transform: translateY(-50%);
-//       margin-top: 0;
-//       .btn {
-//         width: 100px;
-//         height: 50px;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         border-right: 5px;
-//         outline: none;
-//         border: none;
-//         color: #fff;
-//         text-transform: uppercase;
-//         border-radius: 5px;
-//         font-weight: 700;
-//         overflow: hidden;
-//         &.hidden {
-//           background-color: $blue;
-//           margin-right: 10px;
-//         }
-//         &.del {
-//           background-color: $red;
-//         }
-//       }
-//     }
-//   }
-// }
-// .vocaBox {
-//   .inputBox {
-//     display: flex;
-//     margin-bottom: 20px;
-//     label {
-//       display: flex;
-//       color: #fff;
-//       background-color: $blue;
-//       height: 50px;
-//       border-radius: 100px;
-//       font-size: 18px;
-//       font-weight: 700;
-//       align-items: center;
-//       margin-right: 10px;
-//       justify-content: center;
-//       width: 150px;
-//     }
-//     input,
-//     select {
-//       display: flex;
-//       flex-grow: 1;
-//       border: none;
-//       outline: none;
-//       border-radius: 5px;
-//       padding: 0 20px;
-//       box-sizing: border-box;
-//     }
-//   }
-// }
 #footer {
+  color: #fff;
   display: flex;
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 50px;
   p {
     padding: 15px 30px;
-    background-color: #fff;
+    background-color: #3c2a78;
     font-weight: 300;
     border-radius: 100px;
     text-transform: uppercase;
     strong {
       font-weight: 900;
     }
+  }
+}
+@media all and (max-width: 1400px) {
+  .detail {
+    margin-top: 0px;
+    .detailBox {
+      flex-direction: column;
+      .img {
+        margin: 50px auto;
+      }
+      .info {
+        margin-left: 0px;
+        margin: 0 clamp(30px, 0vw, 100px);
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1060px) {
+  .container {
+    .movieList {
+      li {
+        width: 100%;
+      }
+    }
+  }
+}
+@media all and (max-width: 530px) {
+  .container {
+    padding: 0 0px;
+    .movieList {
+      li {
+        margin: 120px 20px 0 10px;
+        text-align: center;
+        .info {
+          margin-left: 0px;
+          margin-top: 20px;
+        }
+        a {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  #search {
+    input {
+      min-width: clamp(260px, 57vw, 300px);
+    }
+  }
+  #footer {
+    margin-top: 40px;
   }
 }

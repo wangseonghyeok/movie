@@ -29,9 +29,6 @@ export default function Detail() {
   return (
     <div id="detail" className="detail">
       <div className="container">
-        <h2 className="title">
-          <strong>Detail</strong>
-        </h2>
         <div className="detailBox">
           <div className="img">
             <img src={`https://image.tmdb.org/t/p/w300/${detail.poster_path}`} alt="" />
@@ -83,7 +80,6 @@ export default function Detail() {
                             <Profile key={idx} profileInfo={item} />
                           </SwiperSlide>
                         );
-                        //return <Profile key={idx} profile_path={item.profile_path} name={item.name} />;
                       })}
                   </Swiper>
                 </dd>
@@ -104,7 +100,6 @@ export default function Detail() {
                             <Profile key={idx} profileInfo={item} />
                           </SwiperSlide>
                         );
-                        //return <Profile key={idx} profile_path={item.profile_path} name={item.name} />;
                       })}
                   </Swiper>
                 </dd>
@@ -115,7 +110,7 @@ export default function Detail() {
             </div>
           </div>
         </div>
-        <div className="btns">
+        {/* <div className="btns">
           <button
             className="btn btnBack"
             onClick={function () {
@@ -124,7 +119,7 @@ export default function Detail() {
           >
             BACK
           </button>
-        </div>
+        </div> */}
       </div>
       <div className="bg" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${detail.backdrop_path})` }}></div>
     </div>

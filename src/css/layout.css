@@ -25,34 +25,27 @@ li {
 #header {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100px;
+  height: 180px;
   position: relative;
   z-index: 99;
   overflow: hidden;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: rgba(37, 36, 79, 0.5);
 }
-#header h1 {
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-#header h1 strong {
-  font-weight: 700;
+#header img {
+  margin-top: 35px;
+  width: 140px;
 }
 
 .container {
-  width: 1400px;
-  margin: 100px auto;
+  max-width: 1400px;
+  margin: 0 auto;
   color: #fff;
 }
 .container .title {
   font-size: 36px;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 50px;
 }
 .container .title strong {
   font-weight: 700;
@@ -63,8 +56,8 @@ li {
 }
 .container .movieList li {
   display: flex;
-  width: calc(50% - 20px);
-  margin: 150px 10px 0 10px;
+  width: calc(50% - 40px);
+  margin: 150px 20px 0 10px;
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 0 20px 0 20px;
@@ -80,14 +73,15 @@ li {
 }
 .container .movieList li .img .point {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  width: 50px;
-  height: 50px;
+  right: 15px;
+  top: 15px;
+  font-size: 14px;
+  width: 35px;
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #3c2a78;
   color: #fff;
   border-radius: 100%;
 }
@@ -138,6 +132,9 @@ li {
   font-size: 14px;
 }
 
+.detail {
+  margin-top: 50px;
+}
 .detail .detailBox {
   display: flex;
   justify-content: space-between;
@@ -148,7 +145,6 @@ li {
 .detail .detailBox .img img {
   border-radius: 0 50px 0 50px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-  border: 10px solid #fff;
 }
 .detail .detailBox .info {
   overflow: hidden;
@@ -229,7 +225,9 @@ li {
 
 #search {
   position: absolute;
-  right: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 110px;
   display: flex;
 }
 #search input {
@@ -242,9 +240,10 @@ li {
   min-width: 300px;
 }
 #search a {
-  background-color: #111;
+  background-color: #3c2a78;
   color: #fff;
   display: flex;
+  height: 40px;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
@@ -258,8 +257,13 @@ li {
     width: 100%;
     padding: 0 20px;
   }
+  #search a {
+    padding: 0px 0px;
+    width: clamp(50px, 8vw, 80px);
+  }
 }
 #footer {
+  color: #fff;
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -267,11 +271,58 @@ li {
 }
 #footer p {
   padding: 15px 30px;
-  background-color: #fff;
+  background-color: #3c2a78;
   font-weight: 300;
   border-radius: 100px;
   text-transform: uppercase;
 }
 #footer p strong {
   font-weight: 900;
+}
+
+@media all and (max-width: 1400px) {
+  .detail {
+    margin-top: 0px;
+  }
+  .detail .detailBox {
+    flex-direction: column;
+  }
+  .detail .detailBox .img {
+    margin: 50px auto;
+  }
+  .detail .detailBox .info {
+    margin-left: 0px;
+    margin: 0 clamp(30px, 0vw, 100px);
+  }
+}
+@media all and (max-width: 1060px) {
+  .container .movieList li {
+    width: 100%;
+  }
+}
+@media all and (max-width: 530px) {
+  .container {
+    padding: 0 0px;
+  }
+  .container .movieList li {
+    margin: 120px 20px 0 10px;
+    text-align: center;
+  }
+  .container .movieList li .info {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+  .container .movieList li a {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #search input {
+    min-width: clamp(260px, 57vw, 300px);
+  }
+  #footer {
+    margin-top: 40px;
+  }
 }
